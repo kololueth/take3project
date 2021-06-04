@@ -160,8 +160,9 @@
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(request)
-        });
 
+        });
+        
         const responseBody = await response.json();
         if (responseBody.isSuccess)
         {
@@ -172,7 +173,7 @@
         {
             updateCalculatorDisplay(responseBody.message);
         }
-
+        
         calculatingValue = null;
     }
 
